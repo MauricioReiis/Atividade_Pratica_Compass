@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js" type="module" defer></script>
+    <title>Cáculo IMC</title>
+
+</head>
+<body>
+    <main>
+        <section id="box-principal"> 
+            <div id="conteudoPrincial">
+                <div id="boxImc"> 
+                    <h1>Calcule seu IMC</h1>
+                </div>
+
+                <div class="containerRange"> 
+                    <p>Peso<span id="value">100</span></p>
+                    <input type="range" min="0" max="150" id="pesoRange" class="range" onChange="rangeSlide">
+                </div>
+
+
+                <div class="containerRange">
+                    <p>Altura <span id="value"></span></p>
+                    <input type="range" min="0" max="150" id="alturaRange" class="range">
+                </div>
+
+
+                <div id="button">
+                    <button>Calcular</button>
+                </div>
+                <div id="CalculoImc">
+                    <h1>IMC: 24.17 (Peso Normal)</h1>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

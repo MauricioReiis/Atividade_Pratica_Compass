@@ -1,0 +1,61 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0ca69;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}
+
+
+#box-principal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f8ebc8;
+    height: 50vh;
+    width: 35%;
+    border-radius: 10px;
+}
+
+#conteudoPrincial{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 60%;
+
+    
+}
+
+#boxImc{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.rangeInput{
+    border: solid 2px rgb(36, 121, 55);
+}
+
+
+#button{
+    height: 10%;
+    width: 100%;
+}
+
+#button button{
+    border: 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #f7b718 0%, #f7b818be 100%);
+    width: 100%;
+    height: 90%;
+    font-size: 27px;
+    cursor: pointer;
+    color: #E0E0E0;
+}
+
+#CalculoImc h1{
+    font-size: 30px;
+}
