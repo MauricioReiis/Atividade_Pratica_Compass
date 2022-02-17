@@ -2,29 +2,47 @@ export default function CalcImc(){
     const $ = document.querySelector.bind(document)
 
     const peso = $("#pesoRange")
+    const valorPeso = $("#valorPeso")
+
     const altura = $("#alturaRange")
-    const calculoIMC = ("#CalculoImc h1")
+    const valorAltura = $("#valorAltura")
 
-    // let imc = kilos / (altura * altura);
+    const calculoIMC = $("#calculo")
 
-    peso.addEventListenner("input", () => {
-        if(peso.value === 18.5){
-            calculoIMC.textContent = "Abaixo do Peso"
+    peso.oninput = function() {
+        valorPeso.innerHTML = peso.value;
+    }
 
-        } else if (peso.value >= 18.5 && peso.value <= 24.9){
-            calculoIMC.textContent = "Peso Normal"
+    altura.oninput = function() {
+        valorAltura.innerHTML = altura.value/100;
+    }
 
-        } else if (peso.value >= 25 && peso.value <= 29.9){
-            calculoIMC.textContent = "Sobrepeso"
+    button.addEventListener("click", () => {
 
-        } else if(peso.value >= 30 && peso.value <= 34.9){
-            calculoIMC.textContent = "Obesidade Grau I"
+        let valorAltura = altura.value/100
+        let imc = peso.value / (valorAltura * valorAltura);
+        let condicao = ""
 
-        }else if(peso.value >= 35 && peso.value <= 39.9){
-            calculoIMC.textContent = "Obesidade Grau II"
+        if(imc <= 18.5){
+            condicao = "Abaixo do Peso"
 
-        }else if(peso.value > 40){
-            calculoIMC.textContent = "Obesidade Mórbida"
-        }   
-    })
+        } else if(imc <= 24.9){
+            condicao = "Peso Normal"
+
+        } else if(imc <= 29.9){
+            condicao = "Sobrepeso"
+
+        } else if(imc <= 34.9){
+            condicao = "Obesidade Grau I"
+
+        } else if(imc <= 39.9){
+            condicao = "Obesidade Grau II"
+
+        } else if(imc > 40){
+            condicao = "Obesidade Mórbida"
+
+        } 
+
+        calculoIMC.textContent = `IMC: ${imc.toFixed(2)} (${condicao}).`
+ })
 }

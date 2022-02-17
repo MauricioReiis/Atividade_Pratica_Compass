@@ -1,17 +1,22 @@
 .containerRange{
     position: relative;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     width: 100%;
     margin-top: 10px;
 }
 
-containerRange p{
-    position: absolue;
-    top: 100px;
+.containerRange p{
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 
-
+.containerRange p span{
+    padding-left: 66%;
+    font-size: 35px;
+    color: #f7ba23;
+}
 
 .range{
     -webkit-appearance: none;

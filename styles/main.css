@@ -53,9 +53,9 @@ main{
     height: 90%;
     font-size: 27px;
     cursor: pointer;
-    color: #E0E0E0;
+    color: #ffffff;
 }
 
 #CalculoImc h1{
-    font-size: 30px;
+    font-size: 18px;
 }

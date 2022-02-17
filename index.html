@@ -17,18 +17,18 @@
                     <h1>Calcule seu IMC</h1>
                 </div>
                 <div class="containerRange"> 
-                    <p>Peso<span id="value"></span></p>
-                    <input type="range" min="0" max="150" id="pesoRange" class="range" onChange="rangeSlide">
+                    <p>Peso<span id="valorPeso">100</span></p>
+                    <input type="range" min="0" max="150" id="pesoRange" class="range">
                 </div>
                 <div class="containerRange">
-                    <p>Altura <span id="value"></span></p>
-                    <input type="range" min="0" max="150" id="alturaRange" class="range">
+                    <p>Altura<span id="valorAltura">1.0</span></p>
+                    <input type="range" min="0" max="250" id="alturaRange" class="range">
                 </div>
                 <div id="button">
                     <button>Calcular</button>
                 </div>
                 <div id="CalculoImc">
-                    <h1>IMC: 24.17 (Peso Normal)</h1>
+                    <h1 id="calculo"></h1>
                 </div>
             </div>
         </section>
